@@ -53,17 +53,18 @@ drawCircles(randomNumber(1,100));
   <script>
       function draw()
   {
+      var colorChoices = [0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F]
 var canvas = document.getElementById('circle');
 if (canvas.getContext)
 {
 var ctx = canvas.getContext('2d'); 
-var X = canvas.width / 2;
-var Y = canvas.height / 2;
-var R = 45;
+var X = randonNumber(1,200);
+var Y = randomNumber(1,200);
+var R = randomNumber(1,200);
 ctx.beginPath();
 ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
 ctx.lineWidth = 3;
-ctx.strokeStyle = '#FF0000';
+ctx.strokeStyle = '#''colorCHoices[randomNumber(0,16)];
 ctx.stroke();
 }
 }
