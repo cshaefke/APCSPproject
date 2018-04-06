@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head></head>
+<title>Create Preformance Task Emily Kiehl</title>
+<body>
+
+<script>
+
+function drawOverPage() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+
+var colorList = ["red","orange","yellow","green","blue","purple","white"];
+function drawCircles(numofCircles){
+for (var i = 0; i < numofCircles; i++) {
+  setStrokeWidth(randomNumber(1,10));
+  setStrokeColor(colorList[randomNumber(1,7)]);
+  circle(randomNumber(10,200), randomNumber(1,200), randomNumber(10,200));
+  }
+}
+
+drawOverPage();
+drawCircles(randomNumber(1,100));
+</script>
