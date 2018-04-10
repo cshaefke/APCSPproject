@@ -5,46 +5,15 @@
   <meta charset=utf-8 />
   <title>Draw a circle</title>
   </head>
-  <body onload="draw();">
-  <canvas id="circle" width="150" height="150"></canvas>
-  <script>
-<!-- <!DOCTYPE html>
-<head>
-APCSP Create</head>
-<title>Emily Kiehl is super cool</title>
-<canvas id="circle" width="150" height="150"></canvas>
-<body>
-    
-    
-    
-    
-    bananas
-    
+  <body>
     <script>
+  var canvas = document.createElement('canvas');
+    canvas.id = "CursorLayer"; canvas.width = 1224; 
+    canvas.height = 768; canvas.style.zIndex = 8; canvas.style.position = "absolute"; 
+    canvas.style.border = "1px solid"; var body = document.getElementsByTagName("body")[0]; 
+    body.appendChild(canvas); cursorLayer = document.getElementById("CursorLayer"); console.log(cursorLayer); // below is optional var ctx = canvas.getContext("2d"); ctx.fillStyle = "rgba(255, 0, 0, 0.2)"; ctx.fillRect(100, 100, 200, 200); ctx.fillStyle = "rgba(0, 255, 0, 0.2)"; ctx.fillRect(150, 150, 200, 200); ctx.fillStyle = "rgba(0, 0, 255, 0.2)"; ctx.fillRect(200, 50, 200, 200);
+    </script>
     
-
-function drawOverPage() {
-    document.getElementById("overlay").style.display = "block";
-}
-
-
-var colorList = ["red","orange","yellow","green","blue","purple","white"];
-    
-function drawCircles(numofCircles){
-for (var i = 0; i < numofCircles; i++) {
-  setStrokeWidth(randomNumber(1,10));
-  setStrokeColor(colorList[randomNumber(1,7)]);
-  circle(randomNumber(10,200), randomNumber(1,200), randomNumber(10,200));
-  }
-}
-                                 
-                                 
-                                 </script>                                 
-
-drawOverPage();
-drawCircles(randomNumber(1,100));
-
-    
-</body>
+    </body>
 </html>
-  
+    
