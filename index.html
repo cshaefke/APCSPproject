@@ -5,12 +5,12 @@
   <meta charset=utf-8 />
   <title>Draw a circle</title>
   </head>
-    <button onclick="drawSquares()">Change the scene</button>
   <body>
+    <button onclick="drawSquares()">Change the scene</button>
     
     <script>
       
-      function drawSquares(){
+      function drawCanvas(){
     var canvas = document.createElement('canvas');
     canvas.id = "CursorLayer"; 
     canvas.width = 2000; 
@@ -22,14 +22,27 @@
     cursorLayer = document.getElementById("CursorLayer"); 
     console.log(cursorLayer); 
     var ctx = canvas.getContext("2d")
+    fillCanvas();
    
-        ctx.fillStyle = "rgba(255, 0, 0, 0.2)"; 
-        ctx.fillRect(100, 100, 200, 200); 
-        ctx.fillStyle = "rgba(0, 255, 0, 0.2)"; 
-        ctx.fillRect(150, 150, 200, 200); 
-        ctx.fillStyle = "rgba(0, 0, 255, 0.2)"; 
-        ctx.fillRect(200, 50, 200, 200);
+    function fillCanvas(numOfSquares){ 
+      var i = 0;
+      var numOfSquares = Math.random(5,25);
+      for (i = 0; i < numOfSquares; i++){
+        ctx.fillStyle = "rgba(generateArrayForFillStyle())"; 
+        ctx.fillRect(generateArrayForFillRect()); 
       }
+      
+    function generateArrayForFillRect(){
+      var fillRectArray = [Math.random(50,300), Math.random(50,300), Math.random(50,300),Math.random(50,300)];
+      return fillRectArray;
+    }
+      
+    function generateArrayForFillStyle(){
+      var fillStyleArray = [Math.random(0,255), Math.random(0,255), Math.random(0,255), Math.random(0.1,1)]; 
+      return fillStyleArray;
+    }
+      
+      
         
         
     </script>
