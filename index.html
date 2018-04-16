@@ -1,29 +1,16 @@
-
 <!DOCTYPE html>
   <html>
   <head>
   <meta charset=utf-8 />
-  <title>Draw a circle</title>
+  <title>Draw squares</title>
   </head>
   <body>
-    <button onclick="drawSquares()">Change the scene</button>
-    
-    parametrics, graph adn elimiante parameter 
-    dereivative of parament=icas curves
-    horizontanl and vertical tangests from derviatives of parametrics,
-    arc legnth parametrics
-    tangent line equasions
-    polar graph
-    unit circle shit
-    find derivates of polar functions
-    tangent lines polar functions
-    find area of polar curves
-    arc legnth of polar curb=ves
-    vectors: derivates, integrals, position, position velocity, accel, speed sqrt(x^2+y^2)
-    
+    <button onclick="drawSquares">Change the scene</button>
+
     <script>
+
       
-      function drawCanvas(){
+      function drawSquares(){
     var canvas = document.createElement('canvas');
     canvas.id = "CursorLayer"; 
     canvas.width = 2000; 
@@ -34,30 +21,30 @@
     body.appendChild(canvas); 
     cursorLayer = document.getElementById("CursorLayer"); 
     console.log(cursorLayer); 
-    var ctx = canvas.getContext("2d")
-    fillCanvas();
+    var ctx = canvas.getContext("2d");
+    fillCanvas(Math.random(25);
+    }
    
     function fillCanvas(numOfSquares){ 
       var i = 0;
-      var numOfSquares = Math.random(5,25);
       for (i = 0; i < numOfSquares; i++){
-        ctx.fillStyle = "rgba(generateArrayForFillStyle())"; 
-        ctx.fillRect(generateArrayForFillRect()); 
+        ctx.fillStyle = "rgba(generateFillStyle())"; 
+        ctx.fillRect(generateFillRect()); 
       }
       
-    function generateArrayForFillRect(){
-      var fillRectArray = [Math.random(50,300), Math.random(50,300), Math.random(50,300),Math.random(50,300)];
+    function generateFillRect(){
+      var fillRectArray = [Math.random(300), Math.random(300), Math.random(300),Math.random(300)];
       return fillRectArray;
     }
       
-    function generateArrayForFillStyle(){
-      var fillStyleArray = [Math.random(0,255), Math.random(0,255), Math.random(0,255), Math.random(0.1,1)]; 
+    function generateFillStyle(){
+      var fillStyleArray = [Math.random(255), Math.random(255), Math.random(255), Math.random(1)]; 
       return fillStyleArray;
     }
+    
+    console.println(math.random(25));
       
       
-        
-        
     </script>
     
     </body>
