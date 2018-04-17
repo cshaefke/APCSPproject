@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-  <html>
+<html>
+
   <head>
-  <meta charset=utf-8 />
-  <title>Draw squares</title>
+    <meta charset=utf-8 />
+    <title>Draw squares</title>
   </head>
+
   <body>
-    <button onclick="drawSquares">Change the scene</button>
+    <button onclick="drawSquares()">Change the scene</button>
 
     <script>
-
-      
-      function drawSquares(){
-    var canvas = document.createElement('canvas');
-    canvas.id = "CursorLayer"; 
-    canvas.width = 2000; 
-    canvas.height = 1200; 
-    canvas.style.zIndex = 8; 
-    canvas.style.position = "absolute"; 
-    var body = document.getElementsByTagName("body")[0]; 
-    body.appendChild(canvas); 
-    cursorLayer = document.getElementById("CursorLayer"); 
-    console.log(cursorLayer); 
-    var ctx = canvas.getContext("2d");
-    fillCanvas(Math.random(25);
-    }
-   
-    function fillCanvas(numOfSquares){ 
-      var i = 0;
-      for (i = 0; i < numOfSquares; i++){
-        ctx.fillStyle = "rgba(generateFillStyle())"; 
-        ctx.fillRect(generateFillRect()); 
+      function drawSquares() {
+        var canvas = document.createElement('canvas');
+        canvas.id = "CursorLayer";
+        canvas.width = 2000;
+        canvas.height = 1200;
+        canvas.style.zIndex = 8;
+        canvas.style.position = "absolute";
+        var body = document.getElementsByTagName("body")[0];
+        body.appendChild(canvas);
+        cursorLayer = document.getElementById("CursorLayer");
+        console.log(cursorLayer);
+        var ctx = canvas.getContext("2d");
+        fillCanvas(Math.random(25);
+        }
       }
-      
-    function generateFillRect(){
-      var fillRectArray = [Math.random(300), Math.random(300), Math.random(300),Math.random(300)];
-      return fillRectArray;
-    }
-      
-    function generateFillStyle(){
-      var fillStyleArray = [Math.random(255), Math.random(255), Math.random(255), Math.random(1)]; 
-      return fillStyleArray;
-    }
-    
-    console.println(math.random(25));
-      
-      
+
+      function fillCanvas(numSquares) {
+        var i = 0;
+        for (i = 0; i < numSquares; i++) {
+          ctx.fillStyle = "rgba(generateFillStyle())";
+          ctx.fillRect(generateFillRect());
+        }
+      }
+
+      function generateFillRect() {
+        var fillRectArray = [Math.random(300), Math.random(300), Math.random(300), Math.random(300)];
+        return fillRectArray;
+      }
+
+      function generateFillStyle() {
+        var fillStyleArray = [Math.random(255), Math.random(255), Math.random(255), Math.random(1)];
+        return fillStyleArray;
+      }
+
+
+
     </script>
-    
-    </body>
+
+  </body>
+
 </html>
-    
