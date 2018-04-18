@@ -22,11 +22,7 @@
         body.appendChild(canvas);
         cursorLayer = document.getElementById("CursorLayer");
         console.log(cursorLayer);
-        var ctx = canvas.getContext("2d");
-        ctx.fillStyle = "rgba(100,200,30,.9)";
-        ctx.fillRect(50,50,50,50);
-        }
-        /* fillCanvas(Math.random());
+        fillCanvas(Math.random());
               }
         
               function fillCanvas(numSquares) {
@@ -37,15 +33,10 @@
         }
               }
         
-              function generateFillRect() {
-        var fillRectArray = [Math.random(), Math.random(), Math.random(), Math.random()];
-        return fillRectArray;
-              }
-        
-              function generateFillStyle() {
-        var fillStyleArray = [Math.random(), Math.random(), Math.random(), Math.random()];
-        return fillStyleArray;
-              } */
+function randomNumber(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 
     </script>
 
