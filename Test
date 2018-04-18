@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8 />
+    <title>Draw Squares</title>
+</head>
+
+<body>
+    <button onclick="drawSquares()">Change the scene</button>
+    
+    <canvas id="background" width="2000" height="1200">
+      This Browser Won't Show This...!!!
+    </canvas>
+    
+ <script>
+    function drawSquares() {
+      var canvas = document.getElementById("background"),
+        c = canvas.getContext("2d");
+        
+        c.fillStyle = "yellow";
+        c.fillRect(0, 0, canvas.width, canvas.height);
+        
+   for (var i = 0; i < 250; i++){
+      var x = Math.random() * canvas.width;
+      var y = Math.random() * canvas.height;
+      
+      c.fillStyle = "red";
+        c.fillRect(x, y, 50, 50);
+    }
+    };
+    
+   </script>
+    
