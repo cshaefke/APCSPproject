@@ -18,16 +18,23 @@
       var canvas = document.getElementById("background"),
         c = canvas.getContext("2d");
         
-        c.fillStyle = "yellow";
+        c.fillStyle = "#91e9f1";
         c.fillRect(0, 0, canvas.width, canvas.height);
         
    for (var i = 0; i < 250; i++){
       var x = Math.random() * canvas.width;
       var y = Math.random() * canvas.height;
       
-      c.fillStyle = "red";
+      c.fillStyle = "#efac56";
         c.fillRect(x, y, 50, 50);
     }
+    for (var i = 0; i < 30; i++){
+      var x = Math.random() * canvas.width;
+      var y = Math.random() * canvas.height;
+      
+      c.fillStyle = "red";
+        c.fillRect(x, y, 150, 150);
+        }
     };
     
    </script>
